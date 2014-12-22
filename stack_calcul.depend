@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1418662927 source:c:\users\Анна\documents\СПбГУ\программирование\calcul\intlist.cpp
+	<stdio.h>
+	<stdlib.h>
+	"intlist.h"
+
+1418724162 c:\users\Анна\documents\СПбГУ\программирование\calcul\intlist.h
+
+1419191752 source:c:\users\Анна\documents\СПбГУ\программирование\calcul\longmath.cpp
+	<stdio.h>
+	"longmath.h"
+
+1418724162 c:\users\Анна\documents\СПбГУ\программирование\calcul\longmath.h
+	"longnum.h"
+
+1418724215 c:\users\Анна\documents\СПбГУ\программирование\calcul\longnum.h
+	"intlist.h"
+
+1419173460 source:c:\users\Анна\documents\СПбГУ\программирование\calcul\longnum.cpp
+	<stdio.h>
+	<stdlib.h>
+	"longnum.h"
+
+1418665975 source:c:\users\Анна\documents\СПбГУ\программирование\calcul\longstack.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"longstack.h"
+
+1418724215 c:\users\Анна\documents\СПбГУ\программирование\calcul\longstack.h
+	"longmath.h"
+
+1419179933 source:c:\users\Анна\documents\СПбГУ\программирование\calcul\all.c
+	<stdio.h>
+	<stdlib.h>
+	"longstack.h"
+
+1419179933 source:c:\users\Анна\documents\СПбГУ\программирование\calcul\all.cpp
+	<stdio.h>
+	<stdlib.h>
+	"longstack.h"
+
