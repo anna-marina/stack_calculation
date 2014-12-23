@@ -1,3 +1,4 @@
+/* Anna Marina */
 #include <stdio.h>
 #include <stdlib.h>
 #include "longnum.h"
@@ -46,10 +47,10 @@ void long_num_read(number **num, char first_digit, int *ok)
 		int_list_push(&(*num)->head, (int)digit - (int)('0'));
 	while (1)
 	{
-		scanf("%c", &digit);
+		digit = getchar();
 		if (digit < ('0') || digit > ('9'))
 		{
-			if ((int)digit == 10 || digit == ' ')
+			if ((int)digit == 10 || digit == ' ' || (int)digit == EOF)
 			{
 				if ((int)digit == 10)
 					*ok = 1;
@@ -59,7 +60,7 @@ void long_num_read(number **num, char first_digit, int *ok)
 			{
 				while((int)digit != 10)
 					scanf("%c", &digit);
-				(*num)->sign = 0xDEAD;
+				(*num)->sign = 777;
 				return;
 			}
 		}

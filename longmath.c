@@ -1,3 +1,4 @@
+/* Anna Marina */
 #include <stdio.h>
 #include "longmath.h"
 
@@ -198,7 +199,7 @@ void long_num_div(number **n1, number **n2, number **res)
 	number *ts1 = long_num_init();
 	number *ts2 = *n2;
 	number *trs = long_num_init();
-	int dig = 0, td = 0, less = 0, curr = 0;
+	int dig = 0, td = 0, less = 0, curr = 0, m = 0;
 	long_num_reverse(&td1);
 	t1 = td1->head;
 	while(t1 != NULL)
@@ -224,6 +225,23 @@ void long_num_div(number **n1, number **n2, number **res)
 		}
 		t1 = t1->next;
 		int_list_push(&(*res)->head, curr);
+	}
+	if (int_list_size(&ts1->head) == 1 && ts1->head->value == 0)
+		m = 1;
+	if ((*n1)->sign == -1 && !m)
+	{
+		long_num_clear(&ts1);
+		t = (*res)->head;
+		while(t != NULL)
+		{
+			td = (int)*(&t->value);
+			int_list_push(&ts1->head, td);
+			t = t->next;
+		}
+		ts2 = long_num_init();
+		int_list_push(&ts2->head, 1);
+		long_num_clear(res);
+		long_num_sum(&ts1, &ts2, res);
 	}
 	long_num_reverse(&(*res));
 	long_num_delete_leading_zeroes(res);

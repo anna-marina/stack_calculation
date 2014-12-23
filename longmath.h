@@ -1,3 +1,4 @@
+/* Anna Marina */
 #include "longnum.h"
 
 void long_num_sum(number **num1, number **num2, number **result);

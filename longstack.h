@@ -1,3 +1,4 @@
+/* Anna Marina */
 #include "longmath.h"
 
 typedef struct stack_node
